@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrecipe_app=self.webpackChunkrecipe_app||[]).push([[853],{7853:function(e,c,i){i.r(c),i.d(c,{default:function(){return s}});var n=i(7689),r=i(8382),t=i(184),s=function(e){var c=(0,n.s0)();return(0,t.jsxs)(r.E.section,{whileHover:{scale:1.2},className:"card-body",onClick:function(){return c("/recipe/".concat(e.id))},children:[(0,t.jsx)("img",{src:e.image,alt:e.title}),(0,t.jsx)("p",{children:e.title})]})}}}]);
+//# sourceMappingURL=853.bb417d0b.chunk.js.map
