@@ -9,10 +9,11 @@ type Props = {
 
 const ScrollToTop: React.FC<Props> = ({ children }) => {
   const { pathname } = useLocation();
-  let scrollTo = useScrollTo();
+
   useLayoutEffect(() => {
+    let scrollTo = useScrollTo();
     scrollTo(0, 0);
-  }, [pathname, scrollTo]);
+  }, [pathname]);
   console.log(pathname);
 
   return <>{children}</>;
