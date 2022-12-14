@@ -1,0 +1,19 @@
+@import "../../BaseStyles/base";
+main {
+    height: 100vh;
+    // overflow-y: scroll;
+    // scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 1em;
+    @include devices(mobile) {
+        scroll-snap-type: none;
+    }
+
+    @include devices(tablet) {
+        scroll-snap-type: none;
+    }
+}
+
+// section {
+//     scroll-snap-align: center;
+// }

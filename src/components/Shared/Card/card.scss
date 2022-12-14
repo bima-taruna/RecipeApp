@@ -1,0 +1,108 @@
+@import "../../../BaseStyles/base";
+
+.cardContainer {
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-detail {
+        position: absolute;
+        bottom: 1vw;
+        left: 20vw;
+        padding: 1.1em;
+        border: 1px solid #4d4d4d;
+        cursor: pointer;
+        background-color: $color1;
+        color: $color4;
+        border-radius: 1em;
+        font-weight: bold;
+
+        &:hover {
+            background-color: $color4;
+            color: $color1;
+        }
+    }
+
+    .summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 3rem;
+        text-align: justify;
+        color: white;
+
+        h2 {
+            font-size: clamp(1.2em, 2vw, 3em);
+        }
+
+        p {
+            line-height: 2rem;
+            width: 90%;
+        }
+        a {
+            font-weight: bold;
+            color: rgb(155, 155, 155);
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $color3;
+            }
+        }
+    }
+
+    .cardImg {
+        width: 50%;
+        height: 100%;
+
+        img {
+            width: 50vw;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+    }
+
+    @include devices(mobile) {
+        flex-direction: column-reverse;
+
+        .btn-detail {
+            left: 35vw;
+            bottom: 34vh;
+            border-radius: 0;
+        }
+
+        .summary {
+            height: 25vh;
+
+            p {
+                line-height: 1rem;
+            }
+        }
+
+        .cardImg {
+            width: 100%;
+            height: 50%;
+
+            img {
+                width: 100%;
+                height: 25vh;
+                border-radius: 0;
+            }
+        }
+    }
+
+    @include devices(tablet) {
+        .cardImg {
+            img {
+                height: 50vh;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import "../../../BaseStyles/base";
+
+.rotate-body {
+    height: 60%;
+    border-radius: 100%;
+    margin: 0 10em;
+    width: 80%;
+
+    @include devices(mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 90%;
+
+        img:first-child {
+            margin: 0 auto;
+        }
+    }
+
+    @include devices(tablet) {
+        margin: 0 5em;
+        width: 90%;
+    }
+}

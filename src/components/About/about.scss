@@ -1,0 +1,48 @@
+@import "../../BaseStyles/base";
+
+.about-page-body {
+    height: calc(100% - 6rem);
+    width: 90vw;
+    display: flex;
+    margin: 0 auto;
+
+    @include devices(mobile) {
+        flex-direction: column-reverse;
+        overflow-y: scroll;
+    }
+    .about {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5em;
+        text-align: justify;
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        @include devices(mobile) {
+            width: 100%;
+            margin-top: 2em;
+        }
+    }
+
+    .credit {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 5em;
+
+        @include devices(mobile) {
+            width: 100%;
+        }
+
+        @include devices(tablet) {
+            width: 60%;
+        }
+    }
+}

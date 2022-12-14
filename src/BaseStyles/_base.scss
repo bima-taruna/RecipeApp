@@ -1,0 +1,27 @@
+$font-primary: "Dosis", serif;
+$font-secondary: "Bitter", serif;
+
+$color1: #eeeeee;
+$color2: #829460;
+$color3: #f96666;
+$color4: #674747;
+$gradient1: radial-gradient(
+  circle farthest-corner at 10% 20%,
+  rgba(255, 246, 236, 1) 39.5%,
+  rgba(100, 46, 122, 0.23) 100.2%
+);
+$gradient2: radial-gradient(circle farthest-corner at 10% 20%, rgba(69, 86, 102, 1) 0%, rgba(34, 34, 34, 1) 90%);
+
+@mixin devices($breakpoint) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
+}

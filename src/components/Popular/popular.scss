@@ -1,0 +1,72 @@
+@import "../../BaseStyles/base";
+
+.popular {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 6rem;
+
+    .error {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mainHeader {
+        width: 100vw;
+        display: flex;
+        height: 20vh;
+        justify-content: space-between;
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 1rem 2rem;
+            font-family: $font-primary;
+            color: $color4;
+            font-size: clamp(2em, 4vw, 4em);
+        }
+    }
+
+    .content {
+        background-image: $gradient2;
+        width: 100vw;
+        height: 80vh;
+        .slick-active {
+            z-index: 2 !important;
+        }
+
+        .slick-current {
+            z-index: 100 !important;
+        }
+
+        .slick-dots {
+            bottom: 30px !important;
+            color: white;
+        }
+    }
+
+    @include devices(mobile) {
+        .content {
+            height: 100vh;
+
+            .slick-dots {
+                bottom: -5vh !important;
+            }
+        }
+    }
+
+    @include devices(tablet) {
+        .main-container {
+            h1 {
+                font-size: 3em;
+            }
+        }
+    }
+}

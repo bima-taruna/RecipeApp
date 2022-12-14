@@ -1,0 +1,303 @@
+@import "../../BaseStyles/base.scss";
+
+.recipe {
+    height: calc(100% - 6rem);
+    overflow: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    @include devices(mobile) {
+        height: calc(100% - 3rem);
+    }
+
+    .loading {
+        text-align: center;
+    }
+
+    .img-container {
+        width: 90vw;
+        margin: 1em auto;
+        height: 50vh;
+        display: flex;
+        justify-content: space-evenly;
+
+        img {
+            object-fit: fill;
+            width: 50%;
+            height: 100%;
+            border-radius: 1em;
+            box-shadow: 0px 3px 3px black;
+        }
+
+        .cooking-time {
+            width: 30%;
+            height: 80%;
+            display: flex;
+            color: white;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: $color3;
+            border-radius: 10px;
+            align-self: center;
+            list-style: none;
+            padding: 1em;
+            background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
+            h5 {
+                text-align: center;
+                font-size: 1.5em;
+            }
+
+            .time-list {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 90%;
+                justify-content: space-evenly;
+
+                label {
+                    padding-right: 2em;
+                }
+
+                .serving {
+                    padding-right: 0.2em;
+                }
+            }
+        }
+
+        @include devices(mobile) {
+            flex-direction: column;
+            height: 60vh;
+            img {
+                margin: 0 auto;
+                width: 90%;
+                height: 30vh;
+            }
+
+            .cooking-time {
+                width: 90%;
+                height: 30vh;
+                margin-top: 1em;
+            }
+        }
+    }
+
+    .description {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em;
+
+        .recipe-title {
+            font-family: $font-primary;
+            font-size: 2rem;
+        }
+
+        p {
+            line-height: 2em;
+            text-align: justify;
+
+            a {
+                text-decoration: none;
+                color: $color3;
+                font-weight: bold;
+
+                &:hover {
+                    color: $color4;
+                }
+            }
+        }
+
+        .ingredients {
+            display: flex;
+            width: 100%;
+        }
+
+        .steps {
+            display: flex;
+            width: 100%;
+        }
+
+        .ingredient-list,
+        .step-list {
+            width: 90%;
+            margin-top: 1em;
+            list-style: none;
+            counter-reset: item;
+            margin-left: 1em;
+
+            li {
+                counter-increment: item;
+                margin-bottom: 1rem;
+                font-size: clamp(0.8em, 1.2vw, 1.5em);
+                word-wrap: break-word;
+            }
+
+            li:before {
+                margin-right: 10px;
+                content: counter(item);
+                border: 1px solid rgba(128, 128, 128, 0.432);
+                border-radius: 100%;
+                color: $color4;
+                width: 1em;
+                text-align: center;
+                display: inline-block;
+                padding: 1em;
+                font-size: 0.8em;
+                margin-left: -50px;
+            }
+        }
+
+        h4 {
+            font-family: $font-primary;
+            width: 10%;
+            font-size: 1.2em;
+        }
+
+        @include devices(mobile) {
+            padding: 1em;
+            width: 90%;
+
+            .recipe-title {
+                text-align: center;
+            }
+
+            .ingredients {
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .steps {
+                flex-direction: column;
+            }
+
+            .ingredient-list,
+            .step-list {
+                width: 100%;
+                margin: 0;
+                text-align: justify;
+            }
+
+            .step-list {
+                width: 90%;
+            }
+
+            h4 {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        @include devices(tablet) {
+            padding: 1em;
+            width: 90%;
+            .recipe-title {
+                text-align: center;
+            }
+
+            .ingredients {
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .steps {
+                flex-direction: column;
+            }
+
+            .ingredient-list,
+            .step-list {
+                width: 100%;
+                margin: 0;
+                text-align: justify;
+            }
+
+            .step-list {
+                width: 90%;
+            }
+
+            h4 {
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    .similar {
+        background-color: $color4;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        color: $color1;
+        padding: 1rem 0;
+
+        h1 {
+            width: 30vw;
+            text-align: center;
+            font-size: 2rem;
+            font-family: $font-primary;
+        }
+        .similar-recipe {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $font-primary;
+            width: 70vw;
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 20vw;
+                cursor: pointer;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 100%;
+                    object-fit: fill;
+                }
+
+                h4 {
+                    text-align: center;
+                }
+            }
+        }
+
+        @include devices(mobile) {
+            flex-direction: column;
+            margin-bottom: 0;
+            h1 {
+                width: 100%;
+            }
+
+            .similar-recipe {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .container {
+                    box-sizing: border-box;
+                    width: 50%;
+                }
+            }
+        }
+        @include devices(tablet) {
+            flex-direction: column;
+            margin-bottom: 0;
+            h1 {
+                width: 100%;
+            }
+
+            .similar-recipe {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .container {
+                    box-sizing: border-box;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+@import "../../BaseStyles/base";
+
+.latest {
+    background-color: $color1;
+    display: inline-block;
+    width: 100vw;
+    overflow-x: hidden !important;
+    height: calc(100% - 6rem);
+
+    @include devices(mobile) {
+        height: calc(100% - 4.5rem);
+    }
+
+    .search-bar {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 20vw;
+            height: 20vw;
+        }
+
+        @include devices(tablet) {
+            margin-top: 10vh;
+
+            img {
+                width: 60%;
+                height: 40vh;
+            }
+        }
+        @include devices(mobile) {
+            margin-top: 10vh;
+
+            img {
+                width: 70%;
+                height: 40vh;
+            }
+        }
+    }
+
+    .input-container {
+        width: 40%;
+        height: 3.5em;
+        background-color: $color1;
+        display: flex;
+
+        @include devices(mobile) {
+            width: 80%;
+        }
+
+        @include devices(tablet) {
+            width: 90%;
+            display: flex;
+            justify-content: center;
+        }
+
+        input {
+            width: 80%;
+            height: 97%;
+            padding: 0;
+            font-size: 2em;
+            padding: 0 0.6em;
+            border-right: none;
+            border-top-left-radius: 0.8rem;
+            border-bottom-left-radius: 0.8rem;
+            border-color: rgba(0, 0, 0, 0.288);
+        }
+
+        .search-icon {
+            width: 10%;
+            height: 100%;
+            color: $color1;
+            border: 1px solid black;
+            background-color: $color2;
+            border-left: none;
+            border-top-right-radius: 0.8rem;
+            border-bottom-right-radius: 0.8rem;
+            border-color: rgba(0, 0, 0, 0.288);
+            cursor: pointer;
+            .icon {
+                width: 100%;
+                height: 100%;
+                font-size: 2em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @include devices(mobile) {
+                width: 20%;
+
+                .icon {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+    .card-body-container {
+        width: 90vw;
+        margin: 0 auto;
+        display: block;
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+            @include devices(mobile) {
+                width: 90vw;
+            }
+        }
+    }
+
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1.5em;
+
+        .btn-loadmore {
+            width: 50%;
+            padding: 1em;
+            border: 1px solid $color3;
+            cursor: pointer;
+            background-color: $color3;
+            color: $color1;
+            font-size: 1.2em;
+            border-radius: 1em;
+            box-shadow: 0px 3px 3px black;
+
+            &:hover {
+                background-color: #f8b1b1;
+            }
+        }
+    }
+}
