@@ -6,9 +6,7 @@ import "./popular.scss";
 import Card from "../Shared/Card/Card";
 import { motion } from "framer-motion";
 import Loading, { Status } from "../Shared/Loading/Loading";
-import burger from "../../logo/1x/Asset 1.png";
-import pizza from "../../logo/1x/Asset 2.png";
-import spagetti from "../../logo/1x/Asset 3.png";
+
 export interface RandomRecipe {
   [key: string]: any;
 }

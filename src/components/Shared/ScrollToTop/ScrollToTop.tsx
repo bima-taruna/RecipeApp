@@ -12,7 +12,7 @@ const ScrollToTop: React.FC<Props> = ({ children }) => {
   let scrollTo = useScrollTo();
   useLayoutEffect(() => {
     scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, scrollTo]);
   console.log(pathname);
 
   return <>{children}</>;
