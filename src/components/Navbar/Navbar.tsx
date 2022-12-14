@@ -22,13 +22,13 @@ const Navbar: FC = () => {
         </div>
         <ul className="normalLi">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/RecipeApp/">Home</Link>
           </li>
           <li>
-            <Link to="/search">Search</Link>
+            <Link to="/RecipeApp/search">Search</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/RecipeApp/about">About</Link>
           </li>
         </ul>
         <div className="burgerMenu">
@@ -46,13 +46,13 @@ const Navbar: FC = () => {
         <div className="menuItemRes">
           <ul className="mobileUl">
             <motion.li variants={animate.linkVariants}>
-              <Link to="/">Home</Link>
+              <Link to="/RecipeApp/">Home</Link>
             </motion.li>
             <motion.li variants={animate.linkVariants}>
-              <Link to="/search">Search</Link>
+              <Link to="/RecipeApp/search">Search</Link>
             </motion.li>
             <motion.li variants={animate.linkVariants}>
-              <Link to="/about">About</Link>
+              <Link to="/RecipeApp/about">About</Link>
             </motion.li>
           </ul>
         </div>

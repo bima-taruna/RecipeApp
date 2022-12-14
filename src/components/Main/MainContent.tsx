@@ -39,10 +39,10 @@ const MainContent: FC = () => {
         <Suspense fallback={<Loading message={Status.isLoading} />}>
           <AnimatePresence mode="wait">
             <Routes key={location.pathname} location={location}>
-              <Route path="/" element={<Popular data={data} />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/recipe/:id" element={<Recipe />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/RecipeApp/" element={<Popular data={data} />} />
+              <Route path="/RecipeApp/search" element={<Search />} />
+              <Route path="/RecipeApp/recipe/:id" element={<Recipe />} />
+              <Route path="/RecipeApp/about" element={<About />} />
             </Routes>
           </AnimatePresence>
         </Suspense>
