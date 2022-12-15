@@ -6,10 +6,6 @@
     overflow-x: hidden;
     box-sizing: border-box;
 
-    @include devices(mobile) {
-        height: calc(100% - 3rem);
-    }
-
     .loading {
         text-align: center;
     }
